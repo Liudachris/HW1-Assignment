@@ -19,7 +19,7 @@ public class OverlayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_overlay);
 
         DateFormat df = new SimpleDateFormat("HH:MM");
 
@@ -89,18 +89,18 @@ public class OverlayActivity extends AppCompatActivity {
         TextView timeGreenwich = findViewById(R.id.editText6);
         timeGreenwich.setText(tzone(0));
         */
-        leftbutt = findViewById(R.id.buttonright);
+        leftbutt = findViewById(R.id.buttonleft);
         leftbutt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                switchToOverlay24();
+                switchToOverlay12();
             }
         });
 
     }
 
 
-    private void switchToOverlay24(){
+    private void switchToOverlay12(){
         Intent intent = new Intent(OverlayActivity.this, MainActivity.class);
         startActivity(intent);
 
